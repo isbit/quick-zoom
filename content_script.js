@@ -1,5 +1,7 @@
 (function () {
     document.addEventListener('wheel', onWheel, { passive: false })
+    console = chrome.extension.getBackgroundPage().console;
+    console.log("from content_script")
     var slowdown = 1
     function onWheel(event) {
         // Check that cmd key is held
